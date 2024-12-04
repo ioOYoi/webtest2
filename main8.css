@@ -1,0 +1,62 @@
+body{
+    background-color: #F9F4F0;
+    margin: 0;  /* 清除外边距 */
+    padding: 0;  /* 清除内边距 */
+}
+
+header{
+    height: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    line-height: 60px;
+    overflow: hidden;
+    padding-left: 100px;  /* 将header部分的左内边距设置为100px */
+}
+
+header img {
+    float: left;  /* 设置header内img为左浮动 */
+}
+
+header nav ul {
+    margin-right: 300px;  /* 设置header内ul右外边距为400px */
+}
+
+header nav li{
+    width: 100px;
+    text-align: center;
+    list-style: none;  /* 去掉圆点 */
+    float: left;  /* 左浮动 */
+}
+
+main{
+    width: 1200px;
+    margin: 0 auto;  /* 设置main外边距为左右居中 */
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer{
+    width: 100%;
+    background: linear-gradient(to right,rgb(210, 180, 140),rgb(253, 245, 230),rgb(210, 180, 140));    
+    text-align: center;
+    text-align: center;
+    color:rgb(128,128,0);
+    font-size: 12px;
+    padding: 20px 0;  /* 设置footer上下内边距正确 */
+}
+
+footer nav {
+    margin-bottom: 20px;  /* 设置footer内nav的下外边距正确 */
+}
+
+footer a{
+    color:SaddleBrown;
+}
+
+footer li{
+     list-style: none;     
+     display:inline-block;
+}

@@ -1,0 +1,102 @@
+ 
+#guidance{
+    width: 100%;
+    text-align: center;
+    background:linear-gradient(to bottom,rgba(245, 129, 35,0.5),rgba(0,0,0,0));
+}
+
+#guidance ul li{
+    background-color: black;
+    list-style-type: none;
+    display: inline-block;
+    width:150px;
+    border-radius: 30%;
+    font-size:18px;
+}
+
+#guidance ul li:hover{
+    background-color:white;
+}
+
+#guidance ul li:hover a{
+    color: black;
+}
+
+#guidance a:link{
+    color:white;
+}
+
+#guidance a[href]:visited{
+    color:orange;
+}
+
+#guidance a[href]:hover{
+    background-color: white;
+    color:black;
+}
+
+#guidance a[href]:active{
+    background-color: rgb(100, 0,90);
+    color:white;
+}
+
+main{
+    border:100px solid;
+    border-image-source:url("border.png");
+    border-image-slice: 20% 20% 20% 20%;
+}
+
+main table tr td {
+    padding: 10px;  /* 设置内边距10px */
+}
+
+main section {
+    padding: 5px;  /* 内边距5px */
+    margin: 3px;   /* 外边距3px */
+}
+
+main h2 {
+    margin-bottom: 5px;  /* 下外边距5px */
+}
+
+#themeIntro{
+    border-collapse: collapse;
+    line-height: 30px;
+    width: 500px;
+    color:#999;
+}
+
+#themeIntro td{
+    border-bottom:1px dotted #a5a5a5;
+}
+
+#theme,#Appreciation{
+    height: 350px;
+}
+
+h1,h2{
+    font-family: 华文新魏;
+}
+
+h3,.text,p{
+    text-indent: 2em;
+}
+
+section{
+    box-shadow: 0 0 5px;
+    background-color: rgb(233, 241, 240);
+}
+
+#Appreciation ul{
+    list-style: none;
+    line-height: 30px;
+}
+
+h2:not(#guidance h2){
+    border-left: 10px solid rgb(100, 0,90);
+    border-bottom: 2px solid rgb(100, 0,90);
+    /*border-bottom: 2px solid rgb(20, 212, 148);*/
+    width: 150px;
+    height: 25px;
+    text-shadow: 3px 3px 3px #999;
+}

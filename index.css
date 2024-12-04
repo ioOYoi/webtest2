@@ -1,0 +1,269 @@
+main {
+    margin-top: 60px;
+}
+
+#content {
+    position: relative; /* 相对定位，为子元素提供定位上下文 */
+    width: 1200px; /* 容器宽度 */
+    height: 600px; /* 容器高度 */
+    margin: 0 auto; /* 居中容器 */
+    background-image: url("mask.png"); /* 设置背景图片为mask */
+    background-size: cover; /* 背景图片覆盖容器 */
+    background-position: center; /* 背景图片居中 */
+    border-radius: 10px; /* 圆角容器 */
+    padding: 20px; /* 内边距 */
+}
+
+
+/* fommer 文本定位在左上角 */
+#fommer {
+	 position: absolute; /* 绝对定位 */
+	 font-family: Arial, Helvetica, sans-serif; /* 英文字体 */
+	font-size:20px; /* 字体大小 */
+    line-height: 1.8; /* 增加行距 */
+    color: white; /* 白色字体 */
+    max-width: 45%; /* 最大宽度为45% */
+    top: 20px; /* 距离容器顶部20px */
+    left: 0px; /* 距离容器左侧20px */
+}
+
+/* latter 文本定位在 fommer 下方空两格 */
+#latter {
+    position: absolute; /* 绝对定位 */
+    font-family: Arial, Helvetica, sans-serif; /* 英文字体 */
+    font-size: 20px; /* 字体大小 */
+    line-height: 1.8; /* 增加行距 */
+    color: white; /* 白色字体 */
+    max-width: 45%; /* 最大宽度为45% */
+    top: 200px; /* 将文本移动到更靠下 */
+    left: 30px; /* 与 fommer 左对齐 */
+}
+
+
+/* latter h3 样式 */
+#latter h3 {
+    display: inline; /* 标题与文字同行 */
+    font-size: 20px; /* 字号 */
+    color: white; 
+    font-weight: bold; /* 加粗 */
+}
+
+/* Title 图片样式 */
+.title-image {
+    position: absolute; /* 绝对定位 */
+    right: 10px; /* 距离右侧10px */
+    top: 50%; /* 垂直居中 */
+    transform: translateY(-50%); /* 调整为完全居中 */
+    max-width: 40%; /* 限制图片宽度 */
+    height: auto; /* 保持宽高比 */
+    animation: showContentImg 2s ease-in-out forwards; /* 动画效果，停留在最后一帧 */
+}
+
+/* 关键帧动画 */
+@keyframes showContentImg {
+    0% {
+        opacity: 0; /* 初始透明度 */
+    }
+    100% {
+        opacity: 1; /* 最终透明度 */
+    }
+}
+/* poets容器样式 */
+/* poets容器样式 */
+/* poets 容器样式 */
+#poets {
+    display: flex; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 子元素均匀分布 */
+    align-items: center; /* 子元素垂直居中 */
+    padding: 0; /* 去除内边距 */
+    background-color: #f8f8f8; /* 背景颜色 */
+    margin: 20px auto; /* 居中并设置上下间距 */
+    width: 90%; /* 容器宽度与 mask 对齐 */
+    max-width: 1200px; /* 最大宽度与 mask 图片一致 */
+}
+
+/* 单个 poet 样式 */
+.poet {
+    position: relative; /* 相对定位 */
+    flex: 1; /* 每个图片均分空间 */
+    text-align: center; /* 内容居中 */
+    overflow: hidden; /* 隐藏多余内容 */
+    max-width: 300px; /* 限制每张图片的最大宽度 */
+    margin: 0 5px; /* 图片之间的左右间距 */
+    box-sizing: border-box; /* 确保宽度包括边框和内边距 */
+}
+
+/* poet 图片样式 */
+.poet img {
+    width: 100%; /* 图片宽度适应容器 */
+    height: auto; /* 保持图片比例 */
+    display: block; /* 块级显示 */
+    border-radius: 10px; /* 圆角边框 */
+    transform: translateX(0); /* 初始位置 */
+    transition: transform 0.3s ease; /* 平滑过渡效果 */
+}
+
+
+.poet .poem {
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 背景从顶部开始 */
+    left: 0; /* 背景从左侧开始 */
+    width: 100%; /* 宽度覆盖整个图片 */
+    height: 100%; /* 高度覆盖整个图片 */
+    font-size: 16px; /* 字体大小 */
+    line-height: 1.5; /* 行距 */
+    color: white; /* 白色字体 */
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明背景覆盖图片 */
+    writing-mode: vertical-rl; /* 设置文字为竖排，从右到左 */
+    text-align: center; /* 竖排文字居中 */
+    display: flex; /* 使用Flexbox对文字居中对齐 */
+    justify-content: center; /* 水平居中对齐文字 */
+    align-items: center; /* 垂直居中对齐文字 */
+    opacity: 0; /* 初始隐藏 */
+   transition: transform 0.3s ease;
+}
+
+.poet .intro {
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 与容器顶部对齐 */
+    left: 0; /* 与容器左侧对齐 */
+    width: 80px; /* 左侧标题宽度 */
+    height: 100%; /* 高度与容器一致 */
+    background-image: url("11-border.png");
+    background-size: 70px 180px; 
+    background-position: 5px 10px; /* 水平偏移10px，垂直偏移20px */
+    background-repeat: no-repeat; /* 防止重复 */
+    background-color: #2a3b5f; /* 左侧深蓝背景 */
+    display: flex; /* Flexbox 布局 */
+    flex-direction: column; /* 纵向排列内容 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    opacity: 0; /* 初始隐藏 */
+   transition: transform 0.3s ease;
+}
+
+/* poet 的 intro 样式 */
+.poet .intro h2 {
+	font-family: "SimSun", "宋体", serif; /* 设置为宋体 */
+	color: #f5f5dc; /* 设置字体颜色为米白色 */
+    font-size: 18px; /* 字体大小 */
+    font-weight: bold; /* 加粗 */
+    writing-mode: vertical-rl; /* 竖排文字 */
+    text-align: center; /* 居中对齐 */
+    margin: 0; /* 去掉默认外边距 */
+}
+
+/* hover 时的 intro 和 poem 显示 */
+.poet:hover .intro {
+	  position: absolute;
+    z-index: 10; /* 设置较高的层级 */
+    opacity: 1; /* 显示 intro 部分 */
+}
+
+.poet:hover .poem {
+	  position: absolute;
+    z-index: 5; /* 设置较高的层级 */
+    opacity: 1; /* 显示 poem 部分 */
+}
+
+/* hover 时的图片 */
+.poet:hover img {
+	 transform: translateX(30px); /* 向右移动30像素 */
+  
+}
+
+.flower {
+    position: absolute; /* 绝对定位 */
+    width: 100px; /* 花朵图片宽度 */
+    height: auto; /* 自动调整高度 */
+    opacity: 0.8; /* 半透明效果 */
+    animation-timing-function: linear; /* 动画线性运动 */
+    animation-iteration-count: infinite; /* 动画无限循环 */
+}
+
+
+#flowerLeft {
+    position: absolute; /* 相对父容器绝对定位 */
+    top: 75%; /* 调整位置到图片区域上方 */
+    left: 0%; /* 调整位置到图片区域左侧 */
+    width: 200px; /* 花朵图片宽度 */
+    height: auto; /* 自动调整高度 */
+    z-index: 5; /* 确保在背景图片之上 */
+}
+
+#flowerRight {
+    position: absolute; /* 相对父容器绝对定位 */
+    top: 5%; /* 调整位置到图片区域下方 */
+    right: 0%; /* 调整位置到图片区域右侧 */
+    width: 200px; /* 花朵图片宽度 */
+    height: 300px; /* 自动调整高度 */
+    z-index: 5; /* 确保在背景图片之上 */
+}
+/* 第一朵落花 */
+.flower:nth-of-type(1) {
+    top: -50px; /* 初始位置在容器顶部之外 */
+    right: 10%; /* 水平位置距离右侧10% */
+    animation: flowerMove1 6s linear infinite; /* 调用 flowerMove1 动画 */
+}
+
+/* 第二朵落花 */
+.flower:nth-of-type(2) {
+    top: -50px; /* 初始位置在容器顶部之外 */
+    right: 20%; /* 水平位置距离右侧20% */
+    animation: flowerMove2 7s linear infinite; /* 调用 flowerMove2 动画 */
+}
+
+/* 第三朵落花 */
+.flower:nth-of-type(3) {
+    top: -50px; /* 初始位置在容器顶部之外 */
+    right: 30%; /* 水平位置距离右侧30% */
+    animation: flowerMove3 8s linear infinite; /* 调用 flowerMove3 动画 */
+}
+
+/* 第一朵落花动画关键帧 */
+@keyframes flowerMove1 {
+    0% {
+        transform: translateY(0) rotate(0deg); /* 起始位置，未旋转 */
+        opacity: 1; /* 完全不透明 */
+    }
+    50% {
+        transform: translateY(300px) rotate(180deg); /* 中途旋转180度 */
+        opacity: 0.8; /* 半透明 */
+    }
+    100% {
+        transform: translateY(600px) rotate(360deg); /* 最终旋转360度 */
+        opacity: 0; /* 逐渐消失 */
+    }
+}
+
+/* 第二朵落花动画关键帧 */
+@keyframes flowerMove2 {
+    0% {
+        transform: translateY(0) rotate(0deg); /* 起始位置，未旋转 */
+        opacity: 1; /* 完全不透明 */
+    }
+    50% {
+        transform: translateY(400px) rotate(90deg); /* 中途旋转90度 */
+        opacity: 0.6; /* 更透明 */
+    }
+    100% {
+        transform: translateY(800px) rotate(270deg); /* 最终旋转270度 */
+        opacity: 0; /* 逐渐消失 */
+    }
+}
+
+/* 第三朵落花动画关键帧 */
+@keyframes flowerMove3 {
+    0% {
+        transform: translateY(0) rotate(0deg); /* 起始位置，未旋转 */
+        opacity: 1; /* 完全不透明 */
+    }
+    50% {
+        transform: translateY(500px) rotate(-90deg); /* 中途旋转-90度 */
+        opacity: 0.7; /* 半透明 */
+    }
+    100% {
+        transform: translateY(900px) rotate(-180deg); /* 最终旋转-180度 */
+        opacity: 0; /* 逐渐消失 */
+    }
+}
